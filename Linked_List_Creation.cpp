@@ -55,7 +55,7 @@ void createNode() { // definition of createNode()
     p = NULL; // (optional) this will remove the address of node from our temporay pointer 'p'
   }
   temp = NULL; // (optional) this will remove the address of node from our temporay pointer 'temp'
-
+  cout << "Node Created!\n";
 
   // both 'p' and 'temp' were pointers to help us out in the process and they will get destroyed after the scope of their blocks
   // automatically, respectively.

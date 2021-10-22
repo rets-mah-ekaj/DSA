@@ -11,7 +11,7 @@ typedef struct node Node;
 Node *head = NULL;
 
 void createNode(); // for the explanation of this function, refer to "Linked_List_Creation.cpp" file
-int lengthCount(); // prototype of lengthCount() function that counts the number of nodes
+int lengthCount(); // prototype of lengthCount() function that counts the number of Nodes
 
 int main() {
   int n;
@@ -48,13 +48,13 @@ void createNode() {
 
 int lengthCount() { // definition of lengthCount()
   int count = 0; // declaring a count variable and initializing it with 0
-  if (head != NULL) { // if head is not containing NULL, that means, Linked List already has some nodes
+  if (head != NULL) { // if head is not containing NULL, that means, Linked List already has some Nodes
     Node *p = head; // create a new pointer 'p' to Node and store head value (address of 1st Node) in it
     // p is pointing to the 1st Node now
-    ++count; // p is pointing to 1st node, hence, Linked List at least has length of 1, so increment the value of count by 1
+    ++count; // p is pointing to 1st Node, hence, Linked List at least has length of 1, so increment the value of count by 1
     while (p -> next != NULL) { // condition will check whether p is pointing to the last Node or not, if not, then loop breaks
-      // we are inside the loop that means the pointer 'p' is not pointing to the last node
-      ++count; // since 'p' is not at last node, increment the value of count by 1
+      // we are inside the loop that means the pointer 'p' is not pointing to the last Node
+      ++count; // since 'p' is not at last Node, increment the value of count by 1
       p = p -> next; // after this, 'p' will point to the next Node of the Linked List
     }
   }

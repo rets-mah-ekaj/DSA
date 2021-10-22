@@ -22,7 +22,7 @@ int main() {
   if (n) // check whether user inserted 0 or non-0 number of Nodes
     cout << "Linked List created.\n";
   else
-    cout << "Linked List not create, 0 Nodes\n";
+    cout << "Linked List not created, 0 Nodes\n";
 
   cout << "Want to add more Nodes (0 for NO / 1 for YES): ";
   cin >> more;

@@ -11,7 +11,7 @@ typedef struct node Node;
 Node *head = NULL;
 
 void createNode(); // for the explanation of this function, refer to "Linked_List_Creation.cpp" file
-void insertNodeBegin(); // prototype of insertNodeBegin() function that adds an element at the beginning of the Linked List
+void insertNodeBegin(Node *); // prototype of insertNodeBegin() function that adds an element at the beginning of the Linked List
 
 int main() {
   int n, more = 0, how_many_more = 0;
@@ -31,7 +31,7 @@ int main() {
     cin >> how_many_more;
   }
   for (int i = 0; i < how_many_more; ++i)
-    insertNodeBegin(); // calling insertNodeBegin() function to insert more Nodes at the beginning of Linked List
+    insertNodeBegin(head); // calling insertNodeBegin() function to insert more Nodes at the beginning of Linked List
   return 0;
 }
 
@@ -58,7 +58,7 @@ void createNode() {
 }
 
 
-void insertNodeBegin() { // definition of insertNodeBegin()
+void insertNodeBegin(Node *head) { // definition of insertNodeBegin()
   Node *temp; // creating a pointer temp of type Node that will hold the address of Node we create
   temp = (Node *)malloc(sizeof(Node)); // dynamically allocating memory for a Node and storing the address of this Node in temp
   // In case if memory is full, malloc() will return NULL which will be stored in temp

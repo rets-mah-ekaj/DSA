@@ -11,7 +11,7 @@ typedef struct node Node;
 Node *head = NULL;
 
 void createNode(); // for the explanation of this function, refer to "Linked_List_Creation.cpp" file
-int lengthCount(); // prototype of lengthCount() function that counts the number of Nodes
+int lengthCount(Node *); // prototype of lengthCount() function that counts the number of Nodes
 
 int main() {
   int n;
@@ -19,7 +19,7 @@ int main() {
   cin >> n;
   for (int i = 0; i < n; ++i)
     createNode();
-  cout << "Number of nodes: " << lengthCount() << '\n'; // calling lengthCount()
+  cout << "Number of nodes: " << lengthCount(head) << '\n'; // calling lengthCount()
   return 0;
 }
 
@@ -46,7 +46,7 @@ void createNode() {
 }
 
 
-int lengthCount() { // definition of lengthCount()
+int lengthCount(Node *head) { // definition of lengthCount()
   int count = 0; // declaring a count variable and initializing it with 0
   if (head != NULL) { // if head is not containing NULL, that means, Linked List already has some Nodes
     Node *p = head; // create a new pointer 'p' to Node and store head value (address of 1st Node) in it

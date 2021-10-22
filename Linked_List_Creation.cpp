@@ -45,8 +45,8 @@ void createNode() { // definition of createNode()
     // if head was NULL earlier, it will now point to 1st node of Linked List
 
   else { // coming into else means there are already some nodes in Linked List
-    Node *p = head; // create a new pointer 'p' to Node and store head value (address of 1st node) in it
-    // p is pointing to first node of Linked List now
+    Node *p = head; // create a new pointer 'p' to Node and store head value (address of 1st Node) in it
+    // p is pointing to 1st Node of Linked List now
     while (p -> next != NULL) // condition will check whether p is pointing to last node or not, if not, then loop will end
       // if above condition is true, that means p is not pointing to last node, hence, move forward
       p = p -> next; // storing the address of next node in p
